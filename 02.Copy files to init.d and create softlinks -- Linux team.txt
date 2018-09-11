@@ -1,0 +1,13 @@
+1.copy the script /u01/app/oracle/admin/scripts/dbora to /etc/init.d/ directory.
+
+2. Update the file ownership to oracle user or oinstall group.
+chmod 750 dbora
+chgrp oinstall dbora
+
+
+3. create softlinks as given below:
+ ln -s /etc/init.d/dbora /etc/rc.d/rc0.d/K01dbora
+ ln -s /etc/init.d/dbora /etc/rc.d/rc3.d/S99dbora
+ ln -s /etc/init.d/dbora /etc/rc.d/rc5.d/S99dbora
+
+4. Reboot the server to verify if the databases are restarted automatically or not.

@@ -1,0 +1,22 @@
+1. Create directory : /u01/app/oracle/admin/scripts
+
+mkdir -p /u01/app/oracle/admin/scripts
+
+2. make /u01/app/oracle/admin/scripts as current directory where we are going to create scripts.
+
+cd /u01/app/oracle/admin/scripts
+
+3. copy files DBStartStop.sh and dbora from central server ussumspresdbs02 and location /u01/app/oracle/admin/scripts:
+
+$ scp vsrirangam@ussumspresdbs02:/u01/app/oracle/admin/scripts/* .
+Password:
+dbora                                                                                                                                 100%  888     0.9KB/s   00:00
+DBStartStop.sh                                                                                                                        100% 2095     2.1KB/s   00:00
+
+4. change the permissions for dbora file.
+
+chmod 750 dbora
+chgrp oinstall dbora
+
+
+
